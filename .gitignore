@@ -130,4 +130,5 @@ build/
 .idea/
 key/*
 README.md
-#package-lock.json
+package-lock.json
+src/config.js
