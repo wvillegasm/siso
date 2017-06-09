@@ -130,3 +130,4 @@ build/
 .idea/
 key/*
 README.md
+#package-lock.json
