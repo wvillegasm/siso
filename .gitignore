@@ -132,3 +132,4 @@ key/*
 README.md
 package-lock.json
 src/config.js
+passfile.txt
