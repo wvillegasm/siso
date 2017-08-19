@@ -1,5 +1,4 @@
 import jwt from 'jsonwebtoken';
-//import app from '../../server';
 import {FORBIDDEN, UNAUTHORIZED} from "http-status-codes";
 
 function verifyToken(req, res, next) {

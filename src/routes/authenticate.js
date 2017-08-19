@@ -20,7 +20,8 @@ auth.post("/", (req, res) => {
     res.json({err: 'You need send password'});
   }
 
-  //console.log(cryto.createHash('md5').update(req.body.password).digest('hex'));
+  console.log(cryto.createHash('md5').update(req.body.password).digest('hex'));
+  console.log(req.body.userName);
 
   UserModel.findOne({
     password: cryto.createHash('md5').update(req.body.password).digest('hex')

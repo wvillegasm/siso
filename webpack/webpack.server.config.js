@@ -17,28 +17,21 @@ const config = {
     filename: 'server.js'
   },
   externals: nodeModules,
-  module:{
-    /*rules:[
-      {
-        use: 'babel-loader',
-        test: /\.js$/,
-      }
-    ],*/
-    loaders: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /(node_module)/,
-        query: {
-          presets: [
-            'latest-minimal'
-          ],
+    module: {
+      rules: [
+        {
+          test: /\.json$/,
+          use: 'json-loader',
+          exclude: /(node_modules)/,
+        }, {
+          test: /\.js$/,
+          use: 'babel-loader',
+          exclude: /(node_modules)/,
         }
-      }
-    ]
-  },
+      ]
+    },
   target: 'node',
-
+  externals: [nodeModules]
 };
 
 module.exports = config;
